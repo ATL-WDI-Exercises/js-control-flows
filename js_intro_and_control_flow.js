@@ -149,7 +149,26 @@ var yourFriends = [
                   ];
 
 
-
+myFriends.concat(yourFriends).sort()
+// [ 'Bilbo',
+//   'Boromir',
+//   'Elrond',
+//   'Faramir',
+//   'Frodo',
+//   'Gandalf',
+//   'Hodor',
+//   'Jojen',
+//   'Jon',
+//   'Jory',
+//   'Legolas',
+//   'Maester',
+//   'Meera',
+//   'Osha',
+//   'Pippin',
+//   'Rickard',
+//   'Rickon',
+//   'Rodrik',
+//   'Septa' ]
 
 
 
