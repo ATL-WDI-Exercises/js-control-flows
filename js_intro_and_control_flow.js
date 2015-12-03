@@ -68,6 +68,11 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 
 Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
+ages = ages.sort(function(a, b) {
+  return a - b;
+})
+
+ages[Math.floor((ages.length - 1) / 2)] //=> 51
 
 
 
