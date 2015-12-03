@@ -2,7 +2,7 @@
 
 1.) Find the last name in the following array:
 
-```
+```js
 var friends = [
                 'Moe', 
                 'Larry', 
@@ -25,7 +25,7 @@ Add your name to the end of the `friends` and add another name to beginning. Cha
 
 3.) Challenge Problem: Here are a list of `ages`
 
-```
+```js
 var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
 
 ```
@@ -34,7 +34,7 @@ find the `median` age. Note: the median is the middle index of the sorted array.
 
 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
  
-```
+```js
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 ```
 
@@ -42,7 +42,7 @@ var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,
 
 6.) We have two lists of friends below:
 
-```
+```js
 var myFriends = [
                   'Rickon',
                   'Meera',
@@ -74,8 +74,7 @@ we need to combine them into one list and sort them.
 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
 
 
-```
-
+```js
 var foods = [
               'Popcorn',
               'Potato chips',
@@ -97,7 +96,6 @@ var foods = [
               'Chocolate',
               'Pizza'
             ];
-
 ```
 
 
@@ -107,7 +105,7 @@ var foods = [
 
 10.) How would you create an array that efficiently stored the following information:
 
-```
+```js
   'Moe' is 18
   'Larry' is 19
   'Curly' is 20
@@ -120,10 +118,11 @@ var foods = [
   'Grey' is 18
   'Lydia' is 24
   'Harriet' is 18
-
 ```
+<br><br>
 
-##Control Flow Lab
+
+##Javascript Control Flow Exercises
 
 ###1. Nightclub Bouncer
 
@@ -139,7 +138,12 @@ Output the following letter grade from a variable with with a test score.
 
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
-### BONUS - Fizz Buzz
-Further challenges if desired:
+###3. Fizz Buzz
+Write a small program that asks a user for a number. If it's a multiple of 3, output 'fizz'. If it's a multiple of 5, output 'buzz'. If it's a multiple of 3 and 5, output 'Fizzbuzz'. 
 
-- Write a small program that asks a user for a number. If it's a multiple of 3, output 'fizz'. If it's a multiple of 5, output 'buzz'. If it's a multiple of 3 and 5, output 'Fizzbuzz'. 
+
+###4. EXTRA BONUS!! (Not required, but give it the college try!)
+
+- There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
+
+- There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
