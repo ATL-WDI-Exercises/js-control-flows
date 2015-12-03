@@ -240,7 +240,11 @@ foods //=>
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
 // if we're going to say that a "Rank #1" food is at index 0, then:
-foods.slice(5, 11) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasagna' ]
+foods.slice(4, 10) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasagna' ]
+
+foods.slice(4, 10).forEach(function(index, food) {
+  console.log(`My `)
+})
 
 
 
@@ -265,6 +269,22 @@ foods.slice(5, 11) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasa
   'Grey' is 18
   'Lydia' is 24
   'Harriet' is 18
+
+// we'd use an associative array
+{
+  'Moe': 18,
+  'Larry': 19,
+  'Curly': 20,
+  'Jane': 20,
+  'Emma': 21,
+  'Elizabeth': 18,
+  'Elinor': 23,
+  'Mary': 25,
+  'Darcy': 24,
+  'Grey': 18,
+  'Lydia': 24,
+  'Harriet': 18
+}
 
 
 
