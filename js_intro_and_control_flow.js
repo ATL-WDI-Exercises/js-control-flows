@@ -200,10 +200,11 @@ var foods = [
             ];
 
 
+function foodRank(food) {
+  return foods.indexOf(food) + 1 // since arrays are indexed at 0, we'd add `1` to get the "Rank"
+}
 
-
-
-
+foodRank('Hamburger') //=> 16
 
 
 
@@ -211,9 +212,26 @@ var foods = [
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
 
-
-
-
+foods.splice(foods.indexOf('Donuts'), 1) //=> [Donuts]
+foods //=>
+// [ 'Popcorn',
+//   'Potato chips',
+//   'Shrimp',
+//   'Chicken rice',
+//   'Poutine',
+//   'Tacos',
+//   'Toast',
+//   'French Toast',
+//   'Crab',
+//   'Pho',
+//   'Lasagna',
+//   'Brownie',
+//   'Lobster',
+//   'Ice cream',
+//   'Hamburger',
+//   'Sushi',
+//   'Chocolate',
+//   'Pizza' ]
 
 
 
