@@ -242,11 +242,6 @@ foods //=>
 // if we're going to say that a "Rank #1" food is at index 0, then:
 foods.slice(4, 10) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasagna' ]
 
-foods.slice(4, 10).forEach(function(index, food) {
-  console.log(`My `)
-})
-
-
 
 
 
