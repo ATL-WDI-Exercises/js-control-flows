@@ -34,6 +34,20 @@ friends[friends.indexOf('Elizabeth')] = 'Liz' //=> 'Liz'
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
+friends = friends.sort();
+  //=> [ 'Curly',
+  // 'Darcy',
+  // 'Elinor',
+  // 'Elizabeth',
+  // 'Emma',
+  // 'Grey',
+  // 'Harriet',
+  // 'Jane',
+  // 'Larry',
+  // 'Lydia',
+  // 'Mary',
+  // 'Moe' ]
+
 
 
 
