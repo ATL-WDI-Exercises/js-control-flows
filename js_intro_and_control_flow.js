@@ -85,6 +85,21 @@ ages[Math.floor((ages.length - 1) / 2)] //=> 51
 
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
+friends.split(',').sort()
+
+// [ 'Curly',
+//   'Darcy',
+//   'Elinor',
+//   'Elizabeth',
+//   'Emma',
+//   'Grey',
+//   'Harriet',
+//   'Jane',
+//   'Larry',
+//   'Lydia',
+//   'Mary',
+//   'Moe' ]
+
 
 
 
