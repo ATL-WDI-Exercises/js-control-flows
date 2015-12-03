@@ -110,6 +110,8 @@ friends.split(',').sort()
 
 5.) List all the `friends` above in reverse alphabetical order.
 
+friends.split(',').sort().reverse()
+
 
 
 
