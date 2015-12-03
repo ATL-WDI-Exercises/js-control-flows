@@ -302,7 +302,24 @@ Using an if/else expression, create a script that prompts the user for their age
   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
 
+  function authorize(age) {
+    var bouncer_says = "";
 
+    if (age > 18) {
+      bouncer_says += "You may enter"
+    } else {
+      bouncer_says += "You may not enter"
+    }
+
+    if (age > 21) {
+      bouncer_says += " and drink"
+    }
+    return bouncer_says
+  }
+
+  var age = prompt("What is your age?")
+  var authorization = authorize(age)
+  console.log(authorization)
 
 
 
