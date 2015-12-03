@@ -200,6 +200,7 @@ var foods = [
             ];
 
 
+// I'm not sure how I feel about saying "My Rank #0" food; so I'm going to add 1 to the index to make it "Rank #1" based at 1 instead of 0
 function foodRank(food) {
   return foods.indexOf(food) + 1 // since arrays are indexed at 0, we'd add `1` to get the "Rank"
 }
@@ -237,6 +238,9 @@ foods //=>
 
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
+
+// if we're going to say that a "Rank #1" food is at index 0, then:
+foods.slice(5, 11) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasagna' ]
 
 
 
