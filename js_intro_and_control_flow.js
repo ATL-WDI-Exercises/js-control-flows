@@ -21,9 +21,9 @@ friends[friends.length - 1] //=> 'Harriet'
 
 Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
-
-
-
+friends.push('Josh') //=> 13
+friends.unshift('Bob') //=> 14
+friends[friends.indexOf('Elizabeth')] = 'Liz' //=> 'Liz'
 
 
 
