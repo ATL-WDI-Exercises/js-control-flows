@@ -1,20 +1,12 @@
-function grade(points) {
-  switch(true) {
-    case (points >= 90):
-      return 'A'
-      break;
-    case ((points >= 80) && (points <= 89)):
-      return 'B'
-      break;
-    case ((points >= 70) && (points <= 79)):
-      return 'C'
-      break;
-    case ((points >= 60) && (points >= 69)):
-      return 'D'
-      break;
-    default:
-      return 'F'
-    }
+function fizzBuzz(number) {
+  if (number % 15 === 0) {
+    console.log('fizzbuzz')
+  } else if (number % 3 === 0) {
+    console.log('fizz')
+  } else if (number % 5 === 0) {
+    console.log('buzz')
+  }
 }
 
-console.log(grade('87'))
+var number = prompt("whats a good number?")
+fizzBuzz(number)

@@ -363,6 +363,18 @@ console.log(grade('87'))
 3.) Fizz Buzz
 Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
+function fizzBuzz(number) {
+  if (number % 15 === 0) {
+    console.log('fizzbuzz')
+  } else if (number % 3 === 0) {
+    console.log('fizz')
+  } else if (number % 5 === 0) {
+    console.log('buzz')
+  }
+}
+
+var number = prompt("whats a good number?")
+fizzBuzz(number)
 
 
 
