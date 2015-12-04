@@ -412,3 +412,37 @@ whereToSit(ticket1)
 whereToSit(ticket2)
 
 - There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
+
+// set up a sample patron object
+var patron = {
+  "ticketType": "premier",
+  "discountType": "senior"
+}
+
+// calculate ticket price based on a given patron object,
+// accounts for ticket types and discount types
+function ticketPrice(patron) {
+  var price = 0
+
+  // get the base price of the ticket
+  switch(patron.ticketType) {
+    case "standard":
+      price = 50
+      break;
+    case "premier":
+      price = 65
+      break
+    case "premier plus":
+      price = 85
+      break
+  }
+
+  // apply any valid discount options
+  if (['senior', 'veteran', 'student'].indexOf(patron.discountType) !== -1) {
+    price -= 10
+  }
+
+  return price
+}
+
+console.log(ticketPrice(patron))
