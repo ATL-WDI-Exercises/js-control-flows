@@ -396,7 +396,7 @@ var ticket1 = {
 }
 
 var ticket2 = {
-  "name": "middle",
+  "name": "left",
   "ticketType": "premium"
 }
 
