@@ -3,8 +3,8 @@ Intro to Javascript
 1.) Find the last name in the following array:
 
 var friends = [
-                'Moe', 
-                'Larry', 
+                'Moe',
+                'Larry',
                 'Curly',
                 'Jane',
                 'Emma',
@@ -19,15 +19,10 @@ var friends = [
 
 Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
-
-
-
-
-
-
-
-
-
+friends.push("Sue");
+friends.unshift("Gertrude");
+friends[6]="Liz";
+friends[5]="Emma";
 
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
@@ -61,7 +56,7 @@ Find the `median` age. Note: the median is the middle index of the sorted array.
 
 
 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
- 
+
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
 
@@ -214,7 +209,7 @@ Using an if/else expression, create a script that prompts the user for their age
 
 
 2.) Grade.js
-Output the following letter grade from a variable with with a test score. 
+Output the following letter grade from a variable with with a test score.
 
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
@@ -230,7 +225,7 @@ Based on the user input, display either "A", "B", "C", "D", or "F", for an score
 
 
 3.) Fizz Buzz
-Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz". 
+Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
 
 
