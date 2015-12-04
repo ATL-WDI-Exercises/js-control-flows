@@ -219,7 +219,7 @@ var friendsObject = [
 
 // ##Javascript Control Flow Exercises
 
-// 1.) Nightclub Bouncer
+console.log("1.) Nightclub Bouncer");
 
 // Using an if/else expression, create a script that prompts the user for their age, then:
 
@@ -228,26 +228,54 @@ var friendsObject = [
 //   * If the user is between 18 and 21, he/she should receive a message that he/she can enter, but not drink.
 //   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
+function bouncer(userAge){
+  if (userAge >= 18){
+    if (userAge >= 21) {
+      console.log("You may enter AND drink");
+    } else {
+      console.log("You may enter, but you cannot drink.");
+    }
+  } else {
+    console.log("Sorry, you may not enter.");
+  }
+}
 
-
-
-
-
-
-
-
-
-
+bouncer(12);
+bouncer(19);
+bouncer(44);
 
 // 2.) Grade.js
 // Output the following letter grade from a variable with with a test score.
 
 // Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
+function numberGrade(grade){
+  switch (true) {
+    case parseInt(grade) > 100:
+      return "Invalid Number Grade";
+    case parseInt(grade) >=90 && parseInt(grade) <= 100:
+      return "A";
+    case parseInt(grade) >=80 && parseInt(grade) < 90:
+      return "B";
+    case parseInt(grade) >=70 && parseInt(grade) < 80:
+      return "C";
+    case parseInt(grade) >=60 && parseInt(grade) < 70:
+      return "D";
+    case parseInt(grade) >=0 && parseInt(grade) < 60:
+      return "F";
+    default:
+      return "Invalid Number Grade";
+  }
+}
 
-
-
-
+console.log(numberGrade(101));
+console.log(numberGrade(95));
+console.log(numberGrade(82));
+console.log(numberGrade(70));
+console.log(numberGrade(66));
+console.log(numberGrade(37));
+console.log(numberGrade(-12));
+console.log(numberGrade("I forgot my homework"));
 
 
 
