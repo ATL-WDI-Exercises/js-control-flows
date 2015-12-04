@@ -390,36 +390,19 @@ fizzBuzz(number)
 //
 // - There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
-var ticket1 = {
-  "name": "middle",
-  "ticketType": "regular"
-}
-
-var ticket2 = {
-  "name": "left",
-  "ticketType": "premium"
-}
-
-function whereToSit(ticket) {
-  if (ticket.ticketType === "premium") {
-    console.log(`You may sit in rows 1-3 of row the ${ticket.name} section`)
-  } else {
-    console.log(`You may sit behind row 3 of ${ticket.name} section`)
-  }
-}
-
-whereToSit(ticket1)
-whereToSit(ticket2)
 
 // - There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
 
 // set up a sample patron object
+// this contains their section name, their ticket type, and their discount type
 var patron = {
+  "name": "left",
   "ticketType": "premier",
   "discountType": "senior"
 }
 
-function getTicketType(patron) {
+// based on the ticket type, get the base price of the ticket
+function getTicketPrice(patron) {
   switch(patron.ticketType) {
     case "standard":
       return 50
@@ -433,13 +416,17 @@ function getTicketType(patron) {
   }
 }
 
+function hasPremiumSeating(patron) {
+  return patron.ticketType === 'premier'
+}
+
 function hasDiscount(patron) {
   return ['senior', 'veteran', 'student'].indexOf(patron.discountType) !== -1
 }
 
 function ticketPrice(patron) {
   // get the base price of the ticket
-  var ticketPrice = getTicketType(patron)
+  var ticketPrice = getTicketPrice(patron)
 
   if (hasDiscount(patron)) {
     ticketPrice -= 10
@@ -447,4 +434,17 @@ function ticketPrice(patron) {
   return ticketPrice
 }
 
-console.log(ticketPrice(patron))
+function patronInformation(patron) {
+  var price = ticketPrice(patron)
+
+  console.log(`Your ticket will be $${price}`)
+
+  if (hasPremiumSeating(patron)) {
+    console.log(`You may sit in rows 1-3 in the ${patron.name} section`)
+  } else {
+    console.log(`You may sit behind row 3 in the ${patron.name} section`)
+  }
+
+}
+
+patronInformation(patron)
