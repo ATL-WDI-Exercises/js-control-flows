@@ -254,38 +254,28 @@ switch(true) {
 var name = ["left", "middle", "right"];
 var ticketType = ["Premium","Normal"];
 
-if (ticketType[0]) {
+if (ticketType === ticketType[0]) {
   console.log("Oooooh, a premium ticket.");
-  switch (true) {
-    case name[0]:
-      console.log("Sit in the first three rows of the left section.");
-      break;
-    case name[1]:
-      console.log("Sit in the first three rows of the middle section.");
-      break;
-    case name[3]:
-      console.log("Sit in the first three rows of the right section.");
-      break;
+  if (name === name[0]) {
+    console.log("Sit in the first three rows of the left section.");
   }
-} else {
-  console.log("A normal ticket. You no good cheap bastard.")
-  switch (true) {
-    case name[0]:
-      console.log("Sit anywhere but the first three rows of the left section.");
-      break;
-    case name[1]:
-      console.log("Sit anywhere but the first three rows of the middle section.");
-      break;
-    case name[3]:
-      console.log("Sit anywhere but the first three rows of the right section.");
-      break;
+  if (name === name[1]) {
+    console.log("Sit in the first three rows of the middle section.");
   }
-}
+  if (name === name[3])
+    console.log("Sit in the first three rows of the right section.");
+  } else {
+        console.log("A normal ticket. You cheap, good-for-nothing bastard.");
+    if (name === name[0]) {
+        console.log("Sit anywhere but the first three rows of the left section.");
+    }
+    if (name === name[1]) {
+        console.log("Sit anywhere but the first three rows of the middle section.");
+    }
+    if (name === name[3]) {
+        console.log("Sit anywhere but the first three rows of the right section.");
+    }
 
-- There is an event with ticket prices that are `$50`, `$65`, `$85`
-for standard, premier, and premier plus(
-    for drinks) seating.Seniors, veterans, and students receive a `$10`
-discount
-while standard patrons receive no discount.Based on hardcoded variables
-for `ticketType`
-and `discountType`, print out a patrons `ticketPrice`.
+  }
+
+// There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus(for drinks) seating.Seniors, veterans, and students receive a `$10` discount while standard patrons receive no discount.Based on hardcoded variables for `ticketType`and `discountType`, print out a patrons `ticketPrice`.
