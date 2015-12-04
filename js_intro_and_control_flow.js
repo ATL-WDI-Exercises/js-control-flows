@@ -27,17 +27,7 @@ friends[5]="Emma";
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
-
-
-
-
-
-
-
-
-
-
-
+friends.sort();
 
 
 
@@ -48,6 +38,14 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
 
+function compareNumbers(a,b){
+    return a - b;
+}
+
+ages.sort(compareNumbers);
+
+var median = ages[parseInt(ages.length/2)];
+console.log(median);
 
 
 
