@@ -1,4 +1,4 @@
-Intro to Javascript
+//Intro to Javascript
 
 //1.) Find the last name in the following array:
 
@@ -25,14 +25,7 @@ friends.push('Josh') //=> 13
 friends.unshift('Bob') //=> 14
 friends[friends.indexOf('Elizabeth')] = 'Liz' //=> 'Liz'
 
-
-
-
-
-
-
-
- //2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
+//2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
 friends = friends.sort();
   //=> [ 'Curly',
@@ -48,20 +41,6 @@ friends = friends.sort();
   // 'Mary',
   // 'Moe' ]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 3.) Challenge Problem: Here are a list of `ages`
 
 var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
@@ -73,13 +52,6 @@ ages = ages.sort(function(a, b) {
 })
 
 ages[Math.floor((ages.length - 1) / 2)] //=> 51
-
-
-
-
-
-
-
 
 // 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
 
@@ -100,26 +72,9 @@ friends.split(',').sort()
 //   'Mary',
 //   'Moe' ]
 
-
-
-
-
-
-
-
-
  //5.) List all the `friends` above in reverse alphabetical order.
 
 friends.split(',').sort().reverse()
-
-
-
-
-
-
-
-
-
 
 // 6.) We have two lists of friends below. We need to combine them into one list and sort them:
 
@@ -170,11 +125,6 @@ myFriends.concat(yourFriends).sort()
 //   'Rodrik',
 //   'Septa' ]
 
-
-
-
-
-
 // 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
 
 var foods = [
@@ -207,11 +157,7 @@ function foodRank(food) {
 
 foodRank('Hamburger') //=> 16
 
-
-
-
 // 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
-
 
 foods.splice(foods.indexOf('Donuts'), 1) //=> [Donuts]
 foods //=>
@@ -234,21 +180,10 @@ foods //=>
 //   'Chocolate',
 //   'Pizza' ]
 
-
-
-
 // 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
 // if we're going to say that a "Rank #1" food is at index 0, then:
 foods.slice(4, 10) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasagna' ]
-
-
-
-
-
-
-
-
 
 // 10.) How would you create an array that efficiently stored the following information:
 
@@ -281,10 +216,6 @@ foods.slice(4, 10) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasa
   'Harriet': 18
 }
 
-
-
-
-
 // ##Javascript Control Flow Exercises
 //
 // 1.) Nightclub Bouncer
@@ -316,19 +247,10 @@ foods.slice(4, 10) //=> [ 'Tacos', 'Toast', 'French Toast', 'Crab', 'Pho', 'Lasa
   var authorization = authorize(age)
   console.log(authorization)
 
-
-
-
-
-
-
-
-
 // 2.) Grade.js
 // Output the following letter grade from a variable with with a test score.
 //
 // Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
-
 
 function grade(points) {
   switch(true) {
@@ -351,15 +273,6 @@ function grade(points) {
 
 console.log(grade('87'))
 
-
-
-
-
-
-
-
-
-
 // 3.) Fizz Buzz
 // Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
@@ -376,20 +289,9 @@ function fizzBuzz(number) {
 var number = prompt("whats a good number?")
 fizzBuzz(number)
 
-
-
-
-
-
-
-
-
-
-
 // 4.) BONUS!! (Not required, but give it the college try!)
-//
-// - There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
+// - There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
 // - There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
 
