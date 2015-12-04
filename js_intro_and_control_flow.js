@@ -2,20 +2,20 @@
 
 // 1.) Find the last name in the following array:
 
-    var friends = [
-        'Moe',
-        'Larry',
-        'Curly',
-        'Jane',
-        'Emma',
-        'Elizabeth',
-        'Elinor',
-        'Mary',
-        'Darcy',
-        'Grey',
-        'Lydia',
-        'Harriet'
-    ];
+var friends = [
+    'Moe',
+    'Larry',
+    'Curly',
+    'Jane',
+    'Emma',
+    'Elizabeth',
+    'Elinor',
+    'Mary',
+    'Darcy',
+    'Grey',
+    'Lydia',
+    'Harriet'
+];
 
 //Find the last name in the following array:
 
@@ -25,11 +25,11 @@ friends[friends.length - 1]
 // and add another name to beginning.Change the `Elizabeth`
 // to `Liz`.
 
-friends.push("Anthony");
+friends.push('Anthony');
 
-friends.unshift("Conway");
+friends.unshift('Conway');
 
-friends[5] = "Liz";
+friends[5] = 'Liz';
 
 // 2.) Go to MDN and lookup `Array.sort`.Sort the list of `friends` above
 
@@ -43,17 +43,19 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 // Note: the median is the middle index of the sorted array.
 // (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
-var sum = ages.reduce(function (a,b) {return a+b});
+var sum = ages.reduce(function(a, b) {
+    return a + b
+});
 var count = ages.length;
-var mean = sum/count;
+var mean = sum / count;
 
-console.log(Math.round(mean));
+Math.round(mean);
 
 // 4.) There are a list of names in a string, below.
 // How could we sort them?
 // Hint : use string and array methods.
 
-var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
+var friends = 'Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet';
 
 friends.split(',');
 
@@ -80,14 +82,14 @@ var myFriends = [
 ];
 
 var yourFriends = [
-'Bilbo',
-'Boromir',
-'Elrond',
-'Faramir',
-'Frodo',
-'Gandalf',
-'Legolas',
-'Pippin'
+    'Bilbo',
+    'Boromir',
+    'Elrond',
+    'Faramir',
+    'Frodo',
+    'Gandalf',
+    'Legolas',
+    'Pippin'
 ];
 
 var mergeFriends = yourFriends + myFriends;
@@ -100,78 +102,46 @@ console.log(ourFriends.sort());
 // Hint: go to MDN to find an array method for finding the index of something in the array.
 
 var foods = [
-'Popcorn',
-'Potato chips',
-'Shrimp',
-'Chicken rice',
-'Poutine',
-'Tacos',
-'Toast',
-'French Toast',
-'Crab',
-'Pho',
-'Lasagna',
-'Brownie',
-'Lobster',
-'Donuts',
-'Ice cream',
-'Hamburger',
-'Sushi',
-'Chocolate',
-'Pizza'
+    'Popcorn',
+    'Potato chips',
+    'Shrimp',
+    'Chicken rice',
+    'Poutine',
+    'Tacos',
+    'Toast',
+    'French Toast',
+    'Crab',
+    'Pho',
+    'Lasagna',
+    'Brownie',
+    'Lobster',
+    'Donuts',
+    'Ice cream',
+    'Hamburger',
+    'Sushi',
+    'Chocolate',
+    'Pizza'
 ];
 
-var favoriteFood = "";
+foods.indexOf();
 
-foods.indexOf(favoriteFood);
+// 8.) I made a mistake with my favorite foods.How can I find the index of `Donuts` and remove it ? * * (Hint: look up `splice`) * *
 
+foods.splice(foods.indexOf('Donuts'), 1);
 
+// 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
+var whyDoMyFriendsWantToKnowThis = foods.slice(5, 11);
 
-
-
-
-8.) I made a mistake with my favorite foods.How can I find the index of `Donuts`
-and remove it ? * * (Hint: look up `splice`) * *
-
-
-
-
-
-
-
-
-
-    9.) My friends want to know what my `5`
-th to `10`
-th favorite foods are.
-
-
-
-
-
-
-
-
-
-
-10.) How would you create an array that efficiently stored the following information:
-
-    'Moe'
-is 18
-    'Larry'
-is 19
-    'Curly'
-is 20
-    'Jane'
-is 20
-    'Emma'
-is 21
-    'Elizabeth'
-is 18
-    'Elinor'
-is 23
-    'Mary'
+// 10.) How would you create an array that efficiently stored the following : or,mation:
+: ',Moe'
+is 18: ',Larry'
+is 19: ',Curly'
+is 20: ',Jane'
+is 20: ',Emma'
+is 21: ',Elizabeth'
+is 18: ',Elinor'
+is 23: ',Mary'
 is 25
     'Darcy'
 is 24
@@ -182,32 +152,45 @@ is 24
     'Harriet'
 is 18
 
+var friendsAges = {
+  'Moe': 18,
+  'Larry': 19,
+  'Curly': 20,
+  'Jane': 20,
+  'Emma': 21,
+  'Elizabeth': 18,
+  'Elinor': 23,
+  'Mary': 25,
+  'Darcy': 24,
+  'Grey': 18,
+  'Lydia': 24,
+  'Harriet': 18,
+};
 
+// ## Javascript Control Flow Exercises
 
+// 1.) Nightclub Bouncer
 
+// Using an if/else expression, create a script that prompts the user for their age, then:
 
-## Javascript Control Flow Exercises
+// * If the user is older than 18, he / she should receive a message that he/she may enter.
+// * If the user is less than 18, then he/she can 't enter and should have a message telling him/her that he/she' is too young.
+// * If the user is between 18 and 21, he / she should receive a message that he/she can enter, but not drink.
+// * If the user is older than 21, he / she should receive a message that he/she can both enter and drink.
 
-1.) Nightclub Bouncer
+var userAge = prompt('How old are you?');
 
-Using an
-if /
-else expression, create a script that prompts the user
-for their age, then:
+userAge = parseInt(userAge);
 
-    * If the user is older than 18, he / she should receive a message that he / she may enter.*If the user is less than 18, then he / she can 't enter and should have a message telling him/her that he/she'
-s too young.*If the user is between 18 and 21, he / she should receive a message that he / she can enter, but not drink.*If the user is older than 21, he / she should receive a message that he / she can both enter and drink.
+if (userAge > 18 && userAge < 21) {
+  alert("Come on inside, get your club on BUT NOT your drink on.");
+} else if (userAge > 21) {
+  alert("Come on inside, get your club AND your drink on.");
+} else {
+  alert("Sorry, you can\'t get your drink on today.")
+}
 
-
-
-
-
-
-
-
-
-
-
+// There's no condition in which a user can be over 18 and not have the choice of drinking or not drinking. There's no reason to create a separate over-18 response.
 
 2.) Grade.js
 Output the following letter grade from a variable with with a test score.
@@ -216,32 +199,10 @@ Based on the user input, display either "A", "B", "C", "D", or "F",
     for an score that is an integer between 0 and 100. Try and use a `switch`
 statement.
 
-
-
-
-
-
-
-
-
-
-
-
 3.) Fizz Buzz
 Write a small program that asks a user
 for a number.If it 's a multiple of 3, output "fizz". If it'
 s a multiple of 5, output "buzz".If it 's a multiple of 3 and 5, output "Fizzbuzz".
-
-
-
-
-
-
-
-
-
-
-
 
 4.) BONUS!!(Not required, but give it the college
     try !)
