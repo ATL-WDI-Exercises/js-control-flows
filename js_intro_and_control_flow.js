@@ -38,7 +38,7 @@ friends[5] = "Liz";
 
 
 
-
+friends.sort();
 
 
 
