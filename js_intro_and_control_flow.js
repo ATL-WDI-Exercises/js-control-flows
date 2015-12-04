@@ -238,7 +238,7 @@ switch(true) {
     console.log("Fizzbuzz. FIZZBUZZ. FIIIIIIZZZZZZBUUUUUUUUUZZZZZZ!!!!!!");
     break;
   case (num % 3 === 0):
-    console.log("You are so, so, so Fizz.");
+    console.log("More fizz than Alka-Seltzer.");
     break;
   case (num % 5 === 0):
     console.log("You buzzing like a honeybee.");
@@ -252,12 +252,34 @@ switch(true) {
 // There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
 var name = ["left", "middle", "right"];
-var section = '';
 var ticketType = ["Premium","Normal"];
 
-
 if (ticketType[0]) {
-  return
+  console.log("Oooooh, a premium ticket.");
+  switch (true) {
+    case name[0]:
+      console.log("Sit in the first three rows of the left section.");
+      break;
+    case name[1]:
+      console.log("Sit in the first three rows of the middle section.");
+      break;
+    case name[3]:
+      console.log("Sit in the first three rows of the right section.");
+      break;
+  }
+} else {
+  console.log("A normal ticket. You no good cheap bastard.")
+  switch (true) {
+    case name[0]:
+      console.log("Sit anywhere but the first three rows of the left section.");
+      break;
+    case name[1]:
+      console.log("Sit anywhere but the first three rows of the middle section.");
+      break;
+    case name[3]:
+      console.log("Sit anywhere but the first three rows of the right section.");
+      break;
+  }
 }
 
 - There is an event with ticket prices that are `$50`, `$65`, `$85`
