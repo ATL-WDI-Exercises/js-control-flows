@@ -190,28 +190,75 @@ if (userAge > 18 && userAge < 21) {
   alert("Sorry, you can\'t get your drink on today.")
 }
 
-// There's no condition in which a user can be over 18 and not have the choice of drinking or not drinking. There's no reason to create a separate over-18 response.
+// ^^^^^^ There's no condition in which a user can be over 18 and not have the choice of drinking or not drinking. There's no reason to create a separate over-18 response.
 
-2.) Grade.js
-Output the following letter grade from a variable with with a test score.
+// 2.) Grade.js
+// Output the following letter grade from a variable with a test score.
 
-Based on the user input, display either "A", "B", "C", "D", or "F",
-    for an score that is an integer between 0 and 100. Try and use a `switch`
-statement.
+// Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
-3.) Fizz Buzz
-Write a small program that asks a user
-for a number.If it 's a multiple of 3, output "fizz". If it'
-s a multiple of 5, output "buzz".If it 's a multiple of 3 and 5, output "Fizzbuzz".
+var testScore = "";
+var letterGrade = "";
 
-4.) BONUS!!(Not required, but give it the college
-    try !)
+parseInt(testScore);
 
-- There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right".If they have a premium ticket they can sit in first `3`
-rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables
-for `name`
-and `ticketType`
-print out appropriate seating instructions.
+switch(true) {
+  case (testScore >= 90):
+    letterGrade = "A";
+    alert("You made an " + letterGrade + " on the test. Rock on with your bad self.");
+    break;
+  case ((testScore < 90) && (testScore >=80)):
+    letterGrade = "B";
+    alert("You made a " + letterGrade + " on the test, also known as an NTS: not too shabby.");
+    break;
+  case ((testScore < 80) && (testScore >= 70)):
+    letterGrade = "C";
+    alert("You made a " + letterGrade + " on the test. Which is average. Which is fine.");
+    break;
+  case ((testScore < 70) && (testScore >=60)):
+    letterGrade = "D";
+    alert("You made a " + letterGrade + " on the test, and that ain't gonna cut it.");
+    break;
+  case (testScore < 60):
+    letterGrade = "F";
+    alert("You made a " + letterGrade + " on the test. Maybe tests aren't your thing.");
+    break;
+  default:
+    alert("If you can't enter a valid test score, you shouldn't be handing out grades.");
+}
+
+// 3.) Fizz Buzz
+// Write a small program that asks a user for a number. If it's a multiple of 3,output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
+
+var num = prompt("Pick a number, any number.");
+parseInt(num);
+
+switch(true) {
+  case ((num % 3 === 0) && (num % 5 === 0)):
+    console.log("Fizzbuzz. FIZZBUZZ. FIIIIIIZZZZZZBUUUUUUUUUZZZZZZ!!!!!!");
+    break;
+  case (num % 3 === 0):
+    console.log("You are so, so, so Fizz.");
+    break;
+  case (num % 5 === 0):
+    console.log("You buzzing like a honeybee.");
+    break;
+  default:
+    console.log("Man, I don't even know.");
+  }
+
+// 4.) BONUS!!(Not required, but give it the college try !)
+
+// There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
+
+var name = ["left", "middle", "right"];
+var section = '';
+var ticketType = ["Premium","Normal"];
+
+
+if (ticketType[0]) {
+  return
+}
 
 - There is an event with ticket prices that are `$50`, `$65`, `$85`
 for standard, premier, and premier plus(
