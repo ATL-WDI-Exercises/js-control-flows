@@ -337,7 +337,27 @@ function seatingChart(name, ticketType){
 // var ticketType = ;
 
 function ticketPrice(ticketType, discount){
+  var ticketPrice = 0;
 
+  switch (true){
+    case ticketType.toLowerCase() === 'standard':
+      ticketPrice = 50;
+      break;
+    case ticketPrice.toLowerCase() === 'premier':
+      ticketPrice = 65;
+      break;
+    case ticketPrice.toLowerCase() === 'premier plus':
+      ticketPrice = $65;
+      break;
+    default:
+      console.log("Unknown ticket type. Please enter Standard, Premier, or Premier Plus");
+  }
+
+  if (discount.toLowerCase() === 'senior' || discount.toLowerCase() === 'veteran' || discount.toLowerCase() === 'student'){
+    ticketPrice-=10;
+  }
+
+  console.log("You ticket price is $" + ticketPrice + ".");
 }
 
 
