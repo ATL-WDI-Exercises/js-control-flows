@@ -1,6 +1,6 @@
-// Intro to Javascript
+console.log("Intro to Javascript");
 
-// 1.) Find the last name in the following array:
+console.log("1.) Find the last name in the following array:");
 
 var friends = [
                 'Moe',
@@ -17,7 +17,7 @@ var friends = [
                 'Harriet'
               ];
 
-// Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
+console.log("Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.");
 
 var lastName = friends[(friends.length-1)];
 
@@ -28,76 +28,44 @@ friends.unshift("Tom");
 friends.splice(6, 1, "Liz");
 
 console.log(friends);
-console.log(friends.length);
 
-
-
-
-
-
-// 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
+console.log("2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above");
 
 friends.sort();
 console.log(friends);
 
-
-
-
-
-
-
-
-
-
-
-
-
-// 3.) Challenge Problem: Here are a list of `ages`
+console.log("3.) Challenge Problem: Here are a list of `ages`");
 
 var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
 
-// Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
+console.log("Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)");
 
 ages.sort(function (a,b) {return a - b;});
 
 function median(arr){
   if(arr%2!==0){
-    console.log("odd");
     return (arr[Math.ceil((arr.length-1)/2)] + arr[Math.floor((arr.length-1)/2)])/2;
   } else {
-    console.log("even");
     return arr[arr.length-1/2];
   }
 }
 
 console.log(median(ages));
 
-
-
-// 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
+console.log("4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.");
 
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
+var friendsArray=friends.split(",");
+console.log(friendsArray.sort());
+console.log("Converted back to string: " + friendsArray.sort().join(","));
 
 
+console.log("5.) List all the `friends` above in reverse alphabetical order.");
+console.log(friendsArray.sort().reverse());
 
 
-
-
-
-
-// 5.) List all the `friends` above in reverse alphabetical order.
-
-
-
-
-
-
-
-
-
-
-// 6.) We have two lists of friends below. We need to combine them into one list and sort them:
+console.log("6.) We have two lists of friends below. We need to combine them into one list and sort them:");
 
 var myFriends = [
                   'Rickon',
@@ -123,16 +91,11 @@ var yourFriends = [
                     'Legolas',
                     'Pippin'
                   ];
+var allFriends = myFriends.concat(yourFriends).sort();
+console.log(allFriends);
 
 
-
-
-
-
-
-
-
-// 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
+console.log("7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.");
 
 var foods = [
               'Popcorn',
@@ -156,6 +119,27 @@ var foods = [
               'Pizza'
             ];
 
+console.log(foods);
+function foodRankName(foodName){
+  if (foods.indexOf(foodName) > -1){
+    return foods.indexOf(foodName)+1;
+  } else {
+    return "Not on list.";
+  }
+}
+
+console.log("8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)");
+
+foods.splice(foods.indexOf("Donuts"), 1);
+console.log(foods);
+
+console.log("9.) My friends want to know what my `5`th to `10`th favorite foods are.");
+function foodRankNum(num){
+  return foods[num-1];
+}
+for(i=5; i<=10; i++){
+  console.log(foodRankNum(i));
+}
 
 
 
@@ -165,28 +149,8 @@ var foods = [
 
 
 
-// 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
-
-
-
-
-
-
-
-
-// 9.) My friends want to know what my `5`th to `10`th favorite foods are.
-
-
-
-
-
-
-
-
-
-
-// 10.) How would you create an array that efficiently stored the following information:
+console.log("10.) How would you create an array that efficiently stored the following information:");
 
   // 'Moe' is 18
   // 'Larry' is 19
@@ -201,7 +165,55 @@ var foods = [
   // 'Lydia' is 24
   // 'Harriet' is 18
 
-
+var friendsObject = [
+  {
+    name:'Moe',
+    age: 18
+  },
+  {
+    name:'Larry',
+    age: 19
+  },
+  {
+    name:'Curly',
+    age: 20
+  },
+  {
+    name:'Jane',
+     age: 20
+  },
+  {
+    name:'Emma',
+     age: 21
+   },
+  {
+    name:'Elizabeth',
+    age: 18
+  },
+  {
+    name:'Elinor',
+    age: 23
+  },
+  {
+    name:'Mary',
+     age: 25
+  },
+  {
+    name:'Darcy',
+    age: 24},
+  {
+    name:'Grey',
+    age: 18
+  },
+  {
+    name:'Lydia',
+    age: 24
+  },
+  {
+    name:'Harriet',
+    age: 18
+  }
+];
 
 
 
