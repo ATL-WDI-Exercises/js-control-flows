@@ -428,6 +428,7 @@ function ticketPrice(patron) {
   // get the base price of the ticket
   var ticketPrice = getTicketPrice(patron)
 
+  // if there is an applicable discount, apply it
   if (hasDiscount(patron)) {
     ticketPrice -= 10
   }
@@ -439,6 +440,7 @@ function patronInformation(patron) {
 
   console.log(`Your ticket will be $${price}`)
 
+  // tell them where they can sit based on their seating options
   if (hasPremiumSeating(patron)) {
     console.log(`You may sit in rows 1-3 in the ${patron.name} section`)
   } else {
