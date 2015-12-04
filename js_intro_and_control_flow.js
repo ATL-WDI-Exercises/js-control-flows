@@ -278,27 +278,66 @@ console.log(numberGrade(-12));
 console.log(numberGrade("I forgot my homework"));
 
 
-
-
-
-
-
 // 3.) Fizz Buzz
 // Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
+function fizzBuzz(num){
+  switch (true){
+    case parseInt(num)%5===0 && parseInt(num)%3===0:
+      console.log("Fizzbuzz");
+      break;
+    case parseInt(num)%5===0:
+      console.log("buzz");
+      break;
+    case parseInt(num)%3===0:
+      console.log("fizz");
+      break;
+    default:
+      console.log(num);
+  }
+}
 
-
-
-
-
-
-
-
-
+for (var i = 0; i <= 30; i++) {
+  fizzBuzz(i);
+}
 
 
 // 4.) BONUS!! (Not required, but give it the college try!)
 
 // - There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
+function seatingChart(name, ticketType){
+  //Section is based on first letter of name. Left: A through H, Center: I through Q, Right: R through Z.
+  var firstLetter=name[0].toLowerCase(),
+  left = ["a","b","c","d","e","f","g","h", "left"],
+  center = ["i","j","k","l","m","n","o","p","q", "center"],
+  right = ["r","s","t","u","v","w","x","y","z", "right"],
+  section = [left, center, right],
+  ticketSection, ticketRow;
+
+  for (var i = 0; i < section.length; i++) {
+    if (section[i].indexOf(firstLetter) > -1){
+      ticketSection = section[i][section[i].length-1];
+    }
+  }
+
+  if (ticketType.toLowerCase()==="premium"){
+    ticketRow="in Row 1-3.";
+  } else {
+    ticketRow="behind Row 3.";
+  }
+
+  console.log("Welcome to the event! You are located in the " + ticketSection + " section and you may sit " + ticketRow);
+
+}
+
 // - There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
+
+// var name = ;
+// var ticketType = ;
+
+function ticketPrice(ticketType, discount){
+
+}
+
+
