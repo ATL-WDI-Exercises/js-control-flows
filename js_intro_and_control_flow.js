@@ -41,12 +41,6 @@ friends.sort();
 
 
 
-
-
-
-
-
-
 3.) Challenge Problem: Here are a list of `ages`
 
 var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
@@ -132,7 +126,9 @@ console.log(ourFriends);
 
 
 
-7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
+7.) I have a list of favorite foods below. If `Popcorn` is my favorite food
+and `Potato chips` my second favorite, then how would you find the rank of another food.
+Hint: go to MDN to find an array method for finding the index of something in the array.
 
 var foods = [
               'Popcorn',
@@ -155,6 +151,8 @@ var foods = [
               'Chocolate',
               'Pizza'
             ];
+
+console.log(foods.indexOf("Sushi"));
 
 
 
