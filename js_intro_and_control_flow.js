@@ -88,7 +88,8 @@ console.log(friendsToArray);
 
 5.) List all the `friends` above in reverse alphabetical order.
 
-
+friendsToArray.reverse();
+console.log(friendsToArray);
 
 
 
