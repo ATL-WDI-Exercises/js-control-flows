@@ -19,17 +19,22 @@ var friends = [
 
 Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
+---answer---
+
 friends.push("Sue");
 friends.unshift("Gertrude");
 friends[6]="Liz";
 friends[5]="Emma";
 
+------------
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
+---answer---
+
 friends.sort();
 
-
+------------
 
 3.) Challenge Problem: Here are a list of `ages`
 
@@ -37,6 +42,7 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 
 Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
+---answer---
 
 function compareNumbers(a,b){
     return a - b;
@@ -47,31 +53,29 @@ ages.sort(compareNumbers);
 var median = ages[parseInt(ages.length/2)];
 console.log(median);
 
-
-
-
-
+------------
 
 
 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
 
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
+---answer---
 
+friends.split(",").sort;
 
-
-
-
+------------
 
 
 
 5.) List all the `friends` above in reverse alphabetical order.
 
 
+---answer---
 
+friends.split(",").sort().reverse();
 
-
-
+------------
 
 
 
