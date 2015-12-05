@@ -200,8 +200,6 @@ var ages = {
 
 
 
-
-
 ##Javascript Control Flow Exercises
 
 1.) Nightclub Bouncer
@@ -213,6 +211,18 @@ Using an if/else expression, create a script that prompts the user for their age
   * If the user is between 18 and 21, he/she should receive a message that he/she can enter, but not drink.
   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
+
+var age = parseInt(prompt("What is your age"));
+
+if (age > 21) {
+  alert("You can enter and drink... responsibly");
+} else if ( age > 18 && age < 21 ) {
+  alert("You can enter but you may not drink");
+} else if ( age > 18 ) {
+  alert("You may enter");
+} else if ( age < 18 ) {
+  alert("You can't enter because you are too younng");
+}
 
 
 
