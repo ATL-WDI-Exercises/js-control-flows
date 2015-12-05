@@ -256,17 +256,21 @@ switch (grade) {
 
 
 
+// 3.) Fizz Buzz
+// Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
+
+var number = prompt("Choose an integer");
 
 
-
-
-
-
-
-3.) Fizz Buzz
-Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
-
-
+if (number % 15 === 0) {
+    console.log("FizzBuzz");
+} else if (number % 5 === 0) {
+    console.log("Buzz");
+} else if (number % 3 === 0) {
+    console.log("Fizz");
+} else {
+    console.log(number);
+}
 
 
 
