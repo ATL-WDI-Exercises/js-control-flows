@@ -126,10 +126,9 @@ var yourFriends = [
                   ];
 
 
-
-
-
-
+var ourFriends = myFriends.concat(yourFriends);
+ourFriends.sort();
+console.log(ourFriends);
 
 
 
