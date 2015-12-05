@@ -108,11 +108,11 @@ var yourFriends = [
                   ];
 
 
+---answer---
 
+myFriends.concat(yourFriends).sort();
 
-
-
-
+------------
 
 
 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
@@ -140,7 +140,11 @@ var foods = [
             ];
 
 
+---answer---
 
+foods.indexOf('Crab') + 1
+
+------------
 
 
 
@@ -150,19 +154,23 @@ var foods = [
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
+---answer---
 
+foods.splice(foods.indexOf('Donuts'),1);
+console.log(foods);
 
-
-
+------------
 
 
 
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
+---answer---
 
+foods.slice(4,10);
 
-
+------------
 
 
 
@@ -184,7 +192,18 @@ var foods = [
   'Lydia' is 24
   'Harriet' is 18
 
+---answer---
 
+Initially, I thought an associative array with a named index should
+be created.  I then discovered that Javascript does not support
+arrays with a named index.  So, to store the info in an array,
+an array of arrays can be used.
+
+
+var peoplesAges = [['Moe',18],['Larry',19],['Curly',20],['Jane',20]] ...
+
+
+------------
 
 
 
