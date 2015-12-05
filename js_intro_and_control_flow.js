@@ -274,28 +274,118 @@ console.log("Your final grade is ." + grade);
 
 ------------
 
-
-
-
-
-
-
 3.) Fizz Buzz
 Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
+---answer---
+
+var number = prompt("enter a number");
+((number % 3 === 0) && (number % 5 === 0)) ? console.log("FizzBuzz") : (number % 3 === 0) ? console.log("Fizz"): (number % 5 === 0) ? console.log("Buzz") : console.log("not a multiple of 3");
 
 
+      OR (not sure which one is preferable)
 
 
+var number = prompt("enter a number");
 
+if ((number % 3 === 0) && (number % 5 === 0)) {
+    console.log("FizzBuzz");
+}
+else if (number % 3 === 0) {
+    console.log("Fizz");
+}
+else if (number % 5 === 0) {
+    console.log("Buzz");
+}
+else {
+    console.log("This number is not a multiple of 3 or 5");
+}
 
-
-
-
+------------
 
 
 4.) BONUS!! (Not required, but give it the college try!)
 
 - There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
+---answer---  This is long-winded. Need to learn how to be more efficient
+
+
+var attendeeName = "Chris Anderson";
+var ticketType = "standard";
+var section = ["left", "middle", "right"];
+
+//splits first name and last name
+var lastName = attendeeName.split(" ");
+
+//gets the last name
+var lastNameAlone = lastName[1];
+
+//splits the letters of the last name
+var lastNameAloneSplit = lastNameAlone.split("");
+
+//converts the letter to lowercase
+var lastNameFirstLetter = lastNameAloneSplit[0].toLowerCase();
+
+
+
+//determines where the attendee can sit
+switch(true) {
+    case ((lastNameFirstLetter < "j") && (ticketType !== "premium")):
+        console.log(attendeeName + " sits beyond the first 3 rows in the left section.");
+        break;
+    case ((lastNameFirstLetter < "j") && (ticketType === "premium")):
+        console.log(attendeeName + " sits in the first 3 rows in the left section.");
+        break;
+    case ((lastNameFirstLetter < "s") && (ticketType !== "premium")):
+        console.log(attendeeName + " sits beyond the first 3 rows in the middle section.");
+        break;
+    case ((lastNameFirstLetter < "s") && (ticketType === "premium")):
+        console.log(attendeeName + " sits in the first 3 rows in the middle section.");
+        break;
+    case ((lastNameFirstLetter <= "z") && (ticketType === "premium")):
+        console.log(attendeeName + " sits in the first 3 rows in the right section.");
+        break;
+    default:
+        console.log(attendeeName + " sits beyond the first 3 rows in the right section.");
+}
+
+
+
+
+
 - There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
+//variables
+var ticketType = "premier plus";
+var discountType = "veterans";
+var ticketPrice;
+
+//checks ticketType
+if(ticketType === "standard") {
+    ticketPrice = 50;
+}
+else if(ticketType === "premier") {
+    ticketPrice = 65;
+}
+else if(ticketType === "premier plus"){
+    ticketPrice = 85;
+}
+else {
+    console.log("not a valid ticket type")
+}
+
+//checks and if applicable applies the discount
+if ((discountType === "seniors") || (discountType === "veterans") || (discountType === "students")) {
+    ticketPrice = (ticketPrice - 10);
+}
+
+console.log(ticketPrice);
+
+
+
+
+
+
+
+
+
