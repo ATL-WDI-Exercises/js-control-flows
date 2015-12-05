@@ -219,8 +219,13 @@ Using an if/else expression, create a script that prompts the user for their age
   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
 
+---answer---
 
+var age = prompt("how old are you?");
 
+access = age >=21 ? console.log("Come on in and party away!") : age >=18 && age < 21 ? console.log("You may enter, but no drinking for you") : console.log("Bummers - You are too young to enter.");
+
+------------
 
 
 
@@ -234,10 +239,40 @@ Output the following letter grade from a variable with with a test score.
 
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
+---answer---
 
+var score = prompt("What is your score?");
+var grade;
 
+switch(true) {
+    case (score < 60):
+        grade = "F";
+        console.log("Your grade is F.  Better luck next time.");
+        break;
 
+    case (score < 70):
+        grade = "D";
+        console.log("Your grade is D. Try again - you can do it!");
+        break;
 
+    case (score < 80):
+        grade = "C";
+        console.log("Your grade is C. Not bad - keep plugging away!");
+        break;
+
+    case (score < 90):
+       console.log("Your grade is B.  Well done - I see an A in your future.");
+       grade = "B";
+        break;
+
+    default:
+        grade = "A";
+        console.log("Your grade is A. Nice!! Keep up the good work!!");
+}
+
+console.log("Your final grade is ." + grade);
+
+------------
 
 
 
