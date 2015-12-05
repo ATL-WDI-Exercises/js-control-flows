@@ -174,9 +174,7 @@ console.log(foods);
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
-
-
-
+console.log(foods.slice(4, 10));
 
 
 
