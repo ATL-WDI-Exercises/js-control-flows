@@ -228,18 +228,31 @@ if (age > 21) {
 
 
 
-
-
-
-
-
-
 2.) Grade.js
 Output the following letter grade from a variable with with a test score.
 
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
+var grade = 67;
+grade = Math.ceil(grade / 10) * 10;
 
+switch (grade) {
+  case 100:
+    console.log("A");
+    break;
+  case 90:
+    console.log("B");
+    break;
+  case 80:
+    console.log("C");
+    break;
+  case 70:
+    console.log("D");
+    break;
+  default:
+    console.log("F");
+    break;
+}
 
 
 
