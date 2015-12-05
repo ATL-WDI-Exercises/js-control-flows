@@ -165,10 +165,9 @@ console.log(foods.indexOf("Sushi"));
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
-
-
-
-
+var index = foods.indexOf("Donuts");
+foods.splice(index, 1);
+console.log(foods);
 
 
 
