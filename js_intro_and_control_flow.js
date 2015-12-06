@@ -194,32 +194,34 @@ Using an if/else expression, create a script that prompts the user for their age
   * If the user is between 18 and 21, he/she should receive a message that he/she can enter, but not drink.
   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
-  //prompt user for his/her age
-  var userAge = prompt('What is your age?');
+  var userAge;
+  var again;
 
-  function age(x) {
-    while(!x) {
-      alert(1);
-      x = prompt('Please use a number like 18, 30, or 99. What is your age?');
-      userAge = parseInt(x);
-      alert(userAge + ' ' + 2);
+  function user() {
+    userAge = prompt('What is your age?');
+    userAge = parseInt(userAge);
+
+    alert('userAge= ' + userAge)
+
+    if (typeof userAge === 'number' && !isNaN(userAge)) {
+      if (userAge >= 18) {
+        alert('You can enter the site.');
+      } else if (userAge < 18) {
+        alert('This site is for 18 and up. You are too young.');
+      } else if (userAge >= 18 && userAge < 21) {
+        alert('You can enter the site, but you cannot drink.');
+      } else if (userAge >= 21) {
+        alert('You can enter the site, and you can drink.');
+      }
+    } else {
+      again = confirm('Please enter your age as a number.');
+      if (again) {
+        user();
+      }
     }
   }
-function() {
-  if(typeof userAge === 'number') {
-    if (userAge >= 18) {
-      alert('You can enter the site.');
-    } else if (userAge < 18) {
-      alert('This site is for 18 and up. You are too young.');
-    } else if (userAge >=18 && userAge < 21) {
-      alert('You can enter the site, but you cannot drink.');
-    } else if (userAge >= 21) {
-      alert('You can enter the site, and you can drink.');
-    }
-  } else {
-    age(userAge);
-  }
-}
+
+  user();
 
 2.) Grade.js
 Output the following letter grade from a variable with a test score.
