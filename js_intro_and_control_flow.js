@@ -115,14 +115,8 @@ console.log(foods); //View updated food array
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
-
-
-
-
-
-
-
-
+console.log(foods[4]); //5th favorite food
+console.log(foods[9]); //10th favorite food
 
 10.) How would you create an array that efficiently stored the following information:
 
