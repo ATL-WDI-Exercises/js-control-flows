@@ -17,34 +17,33 @@ var friends = [
   'Harriet'
 ];
 
-console.log(friends[friends.length - 1]);
+console.log(friends[friends.length - 1]); //find and view last name in friends array
 
 Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
-friends.push('Katie'); //Add my name to end of friends
-friends.unshift('Nancy'); //Add name to beginning of friends
-friends.splice(6, 1,'Liz'); //Change "Elizabeth" to "Liz"
+friends.push('Katie'); //add my name to end of friends
+friends.unshift('Nancy'); //add name to beginning of friends
+friends.splice(6, 1,'Liz'); //change "Elizabeth" to "Liz"
 console.log(friends); //view lines 24-26
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
-friends.sort(); //sort friends array
-console.log(friends); //view sort
+console.log(friends.sort()); //sort and view updated order of friends array
 
 3.) Challenge Problem: Here are a list of `ages`
 
 var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
 Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
-ages.sort(function(a,b){return a-b});//Find median age of ages
-console.log(ages[(ages.length-1)/2]);//view median age
+ages.sort(function(a,b){return a-b});//sort ages in ascending numerical order
+console.log(ages[(ages.length-1)/2]);//find and view median age of ages array
 
 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
 
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
-friends = friends.split(','); //move string to array
-console.log(friends.sort()); //sort friends array in alphabetical order
+friends = friends.split(','); //split string to array
+console.log(friends.sort()); //sort and view friends array in alphabetical order
 
 5.) List all the `friends` above in reverse alphabetical order.
 
@@ -77,8 +76,8 @@ var yourFriends = [
   'Pippin'
 ];
 
-var ourFriends = myFriends.concat(yourFriends); //Combine myFriends & your Friends
-console.log(ourFriends.sort());  //Sort ourFriends in alphabetical order
+var ourFriends = myFriends.concat(yourFriends); //combine myFriends & your Friends
+console.log(ourFriends.sort()); //sort ourFriends in alphabetical order
 
 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
 
@@ -104,14 +103,14 @@ var foods = [
   'Pizza'
 ];
 
-var foodQ = 'Pizza'; //pick the food to find
-console.log(foods.indexOf(foodQ));  //view index of food chosen
+var favFoods = 'Pizza'; //pick the food to find
+console.log(foods.indexOf(favFoods) + ' out of ' + (foods.length-1));  //find and view index of food chosen
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
-console.log(foods.indexOf('Donuts'));  //find index of 'Donuts'
-console.log(foods.splice(13, 1)); //remove 'Donuts'
-console.log(foods); //View updated food array
+foods.indexOf('Donuts'); //find index of 'Donuts'
+foods.splice(13, 1); //remove 'Donuts'
+console.log(foods); //view updated food array
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
