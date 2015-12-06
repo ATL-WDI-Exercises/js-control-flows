@@ -1,6 +1,6 @@
-console.log("Intro to Javascript");
+//Intro to Javascript
 
-console.log("1.) Find the last name in the following array:");
+//1.) Find the last name in the following array:
 
 var friends = [
                 'Moe',
@@ -17,7 +17,7 @@ var friends = [
                 'Harriet'
               ];
 
-console.log("Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.");
+//Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
 var lastName = friends[(friends.length-1)];
 
@@ -29,16 +29,17 @@ friends.splice(6, 1, "Liz");
 
 console.log(friends);
 
-console.log("2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above");
+//2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
 friends.sort();
+
 console.log(friends);
 
-console.log("3.) Challenge Problem: Here are a list of `ages`");
+//3.) Challenge Problem: Here are a list of `ages`
 
 var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
 
-console.log("Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)");
+//Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
 ages.sort(function (a,b) {return a - b;});
 
@@ -52,20 +53,22 @@ function median(arr){
 
 console.log(median(ages));
 
-console.log("4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.");
+//4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
 
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
 var friendsArray=friends.split(",");
+
 console.log(friendsArray.sort());
 console.log("Converted back to string: " + friendsArray.sort().join(","));
 
 
-console.log("5.) List all the `friends` above in reverse alphabetical order.");
+//5.) List all the `friends` above in reverse alphabetical order.
+
 console.log(friendsArray.sort().reverse());
 
 
-console.log("6.) We have two lists of friends below. We need to combine them into one list and sort them:");
+//6.) We have two lists of friends below. We need to combine them into one list and sort them:
 
 var myFriends = [
                   'Rickon',
@@ -91,11 +94,13 @@ var yourFriends = [
                     'Legolas',
                     'Pippin'
                   ];
+
 var allFriends = myFriends.concat(yourFriends).sort();
+
 console.log(allFriends);
 
 
-console.log("7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.");
+//7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
 
 var foods = [
               'Popcorn',
@@ -120,6 +125,7 @@ var foods = [
             ];
 
 console.log(foods);
+
 function foodRankName(foodName){
   if (foods.indexOf(foodName) > -1){
     return foods.indexOf(foodName)+1;
@@ -128,29 +134,24 @@ function foodRankName(foodName){
   }
 }
 
-console.log("8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)");
+//8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)
 
 foods.splice(foods.indexOf("Donuts"), 1);
+
 console.log(foods);
 
-console.log("9.) My friends want to know what my `5`th to `10`th favorite foods are.");
+//9.) My friends want to know what my `5`th to `10`th favorite foods are.
+
 function foodRankNum(num){
   return foods[num-1];
 }
+
 for(i=5; i<=10; i++){
   console.log(foodRankNum(i));
 }
 
 
-
-
-
-
-
-
-
-
-console.log("10.) How would you create an array that efficiently stored the following information:");
+//10.) How would you create an array that efficiently stored the following information:
 
   // 'Moe' is 18
   // 'Larry' is 19
@@ -219,7 +220,7 @@ var friendsObject = [
 
 // ##Javascript Control Flow Exercises
 
-console.log("1.) Nightclub Bouncer");
+//1.) Nightclub Bouncer
 
 // Using an if/else expression, create a script that prompts the user for their age, then:
 
@@ -244,7 +245,7 @@ bouncer(12);
 bouncer(19);
 bouncer(44);
 
-console.log("2.) Grade.js");
+//2.) Grade.js
 // Output the following letter grade from a variable with with a test score.
 
 // Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
