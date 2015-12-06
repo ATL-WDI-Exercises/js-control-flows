@@ -21,8 +21,10 @@ console.log(friends[friends.length - 1]);
 
 Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
-friends.push('Katie');
-console.log(friends);
+friends.push('Katie'); //Add my name to end of friends
+friends.unshift('Nancy'); //Add name to beginning of friends
+friends.splice(6, 1,'Liz'); //Change "Elizabeth" to "Liz"
+console.log(friends); //console.log friends to see lines 24-26
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
