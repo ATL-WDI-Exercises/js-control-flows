@@ -241,16 +241,44 @@ if(userInput) {
 3.) Fizz Buzz
 Write a small program that asks a user for a number. If it''s a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
-var userInput = prompt('Pick a number!');
-userInput = parseInt(userInput);
+var userInput;
 
-if(userInput%3 === 0  && userInput%5 === 0) {
-  alert('Fizzbuzz');
-} else if (userInput%3 === 0) {
-  alert('Fizz');
-} else if (userInput%5 === 0) {
-  alert('Buzz');
-} else {location.reload();}
+function playAgain() {
+  play = confirm('Would you like to play again?');
+    if(play) {
+      user();
+    }
+}
+
+function user() {
+  userInput = prompt('Pick a number!');
+  userInput = parseInt(userInput);
+
+  if(userInput) {
+    if(userInput%3 === 0  && userInput%5 === 0) {
+      alert('Fizzbuzz');
+      playAgain();
+    } else if (userInput%3 === 0) {
+      alert('Fizz');
+      playAgain();
+    } else if (userInput%5 === 0) {
+      alert('Buzz');
+      playAgain();
+    } else {
+      play = confirm('You didn\'t use a number divisible by 3 or 5. Would you like to try again?');
+      if(play) {
+        user();
+      }
+    }
+  } else {
+    play = confirm('It looks like you didn\'t use a number...Would you like to try again?');
+    if(play) {
+      user();
+    }
+  }
+}
+
+user();
 
 4.) BONUS!! (Not required, but give it the college try!)
 
