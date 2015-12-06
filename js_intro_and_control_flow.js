@@ -244,7 +244,7 @@ bouncer(12);
 bouncer(19);
 bouncer(44);
 
-// 2.) Grade.js
+console.log("2.) Grade.js");
 // Output the following letter grade from a variable with with a test score.
 
 // Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
