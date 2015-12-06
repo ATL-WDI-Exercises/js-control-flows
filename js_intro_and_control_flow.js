@@ -225,17 +225,49 @@ Using an if/else expression, create a script that prompts the user for their age
 Output the following letter grade from a variable with a test score.
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
-var userInput = prompt('Enter a number between 1-100');
-userInput = parseInt(userInput);
+var testScore;
 
-while(!userInput) {
-  userInput = prompt('Enter a number between 1-100');
+function score() {
+  testScore = prompt('Enter a number between 1-100.');
+  testScore = parseInt(testScore);
+
+  if(!testScore) {
+    testScore;
+  }
+
+  if(testScore) {
+    if(testScore < 60 && testScore >= 0) {
+      return 1;
+    } else if (testScore > 60 && testScore <75) {
+      return 2;
+    } else if (testScore >= 75 && testScore < 80) {
+      return 3;
+    } else if (testScore >= 80 && testScore < 90) {
+      return 4;
+    } else if(testScore >= 90 && testScore <= 100) {
+      return 5;
+    }
+  }
 }
 
-if(userInput) {
-  switch(userInput) {
-    case()
-  }
+switch(score()) {
+  case 1:
+    "F";
+    break;
+  case 2:
+    "D";
+    break;
+  case 3:
+    "C";
+    break;
+  case 4:
+    "B";
+    break;
+  case 5:
+    "A";
+    break;
+  default:
+    "Could not compute your grade at this time."
 }
 
 3.) Fizz Buzz
@@ -283,6 +315,24 @@ user();
 
 4.) BONUS!! (Not required, but give it the college try!)
 
-- There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
+- There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right".
+If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3.
+Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
+
+var name = 'left';
+var ticketType = 'premium';
+var row;
+
+if(ticketType.toLowerCase() === 'premium') {
+  row = 'the first three rows.'
+} else {
+  row = 'row four or higher.'
+}
+
+console.log('Please sit in the ' + name  + ' section in ' + row);
+
+
+
+
 
 - There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
