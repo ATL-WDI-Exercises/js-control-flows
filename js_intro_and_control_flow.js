@@ -44,18 +44,11 @@ console.log(ages[(ages.length-1)/2]);//view median age
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
 friends = friends.split(','); //move string to array
-console.log(friends.sort()); //sort array in alphabetical order
+console.log(friends.sort()); //sort friends array in alphabetical order
 
 5.) List all the `friends` above in reverse alphabetical order.
 
-
-
-
-
-
-
-
-
+console.log(friends.sort().reverse()); //sort friends array in reverse alphabetical order
 
 6.) We have two lists of friends below. We need to combine them into one list and sort them:
 
