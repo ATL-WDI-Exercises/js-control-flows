@@ -24,23 +24,12 @@ Add your name to the end of the `friends` and add another name to beginning. Cha
 friends.push('Katie'); //Add my name to end of friends
 friends.unshift('Nancy'); //Add name to beginning of friends
 friends.splice(6, 1,'Liz'); //Change "Elizabeth" to "Liz"
-console.log(friends); //console.log friends to see lines 24-26
+console.log(friends); //view lines 24-26
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+friends.sort(); //sort friends array
+console.log(friends); //view sort
 
 3.) Challenge Problem: Here are a list of `ages`
 
