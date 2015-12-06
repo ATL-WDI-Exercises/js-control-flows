@@ -83,26 +83,26 @@ console.log(ourFriends.sort());  //Sort ourFriends in alphabetical order
 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
 
 var foods = [
-              'Popcorn',
-              'Potato chips',
-              'Shrimp',
-              'Chicken rice',
-              'Poutine',
-              'Tacos',
-              'Toast',
-              'French Toast',
-              'Crab',
-              'Pho',
-              'Lasagna',
-              'Brownie',
-              'Lobster',
-              'Donuts',
-              'Ice cream',
-              'Hamburger',
-              'Sushi',
-              'Chocolate',
-              'Pizza'
-            ];
+  'Popcorn',
+  'Potato chips',
+  'Shrimp',
+  'Chicken rice',
+  'Poutine',
+  'Tacos',
+  'Toast',
+  'French Toast',
+  'Crab',
+  'Pho',
+  'Lasagna',
+  'Brownie',
+  'Lobster',
+  'Donuts',
+  'Ice cream',
+  'Hamburger',
+  'Sushi',
+  'Chocolate',
+  'Pizza'
+];
 
 
 
@@ -149,9 +149,57 @@ var foods = [
   'Lydia' is 24
   'Harriet' is 18
 
-
-
-
+  //use an array of associative arrays/objects
+  var friends = [
+    {
+      name: 'Moe',
+      age: 18
+    },
+    {
+      name: 'Larry',
+      age: 19
+    },
+    {
+      name: 'Curly',
+      age: 20
+    },
+    {
+      name: 'Jane',
+      age: 20
+    },
+    {
+      name: 'Emma',
+      age: 21
+    },
+    {
+      name: 'Elizabeth',
+      age: 18
+    },
+    {
+      name: 'Elinor',
+      age: 23
+    },
+    {
+      name: 'Mary',
+      age: 25
+    },
+    {
+      name: 'Darcy',
+      age: 24
+    },
+    {
+      name: 'Grey',
+      age: 18
+    },
+    {
+      name: 'Lydia',
+      age: 24
+    },
+    {
+      name: 'Harriet',
+      age: 18
+    }
+  ]
 
 ##Javascript Control Flow Exercises
 
