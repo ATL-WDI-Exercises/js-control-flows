@@ -109,13 +109,9 @@ console.log(foods.indexOf(foodQ));  //view index of food chosen
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
-
-
-
-
-
-
-
+console.log(foods.indexOf('Donuts'));  //find index of 'Donuts'
+console.log(foods.splice(13, 1)); //remove 'Donuts'
+console.log(foods); //View updated food array
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
