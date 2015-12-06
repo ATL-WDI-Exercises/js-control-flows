@@ -149,7 +149,7 @@ var foods = [
   'Lydia' is 24
   'Harriet' is 18
 
-  //use an array of associative arrays/objects
+  //use an array of objects
   var friends = [
     {
       name: 'Moe',
@@ -206,52 +206,68 @@ var foods = [
 1.) Nightclub Bouncer
 
 Using an if/else expression, create a script that prompts the user for their age, then:
-
   * If the user is older than 18, he/she should receive a message that he/she may enter.
   * If the user is less than 18, then he/she can't enter and should have a message telling him/her that he/she's too young.
   * If the user is between 18 and 21, he/she should receive a message that he/she can enter, but not drink.
   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
+  //prompt user for his/her age
+  var userAge = prompt('What is your age?');
 
-
-
-
-
-
-
-
-
-
+  function age(x) {
+    while(!x) {
+      alert(1);
+      x = prompt('Please use a number like 18, 30, or 99. What is your age?');
+      userAge = parseInt(x);
+      alert(userAge + ' ' + 2);
+    }
+  }
+function() {
+  if(typeof userAge === 'number') {
+    if (userAge >= 18) {
+      alert('You can enter the site.');
+    } else if (userAge < 18) {
+      alert('This site is for 18 and up. You are too young.');
+    } else if (userAge >=18 && userAge < 21) {
+      alert('You can enter the site, but you cannot drink.');
+    } else if (userAge >= 21) {
+      alert('You can enter the site, and you can drink.');
+    }
+  } else {
+    age(userAge);
+  }
+}
 
 2.) Grade.js
 Output the following letter grade from a variable with with a test score.
-
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
+var userInput = prompt('Enter a number between 1-100');
+userInput = parseInt(userInput);
 
+while(!userInput) {
+  userInput = prompt('Enter a number between 1-100');
+}
 
-
-
-
-
-
-
-
-
+// if(userInput) {
+//   switch(userInput) {
+//     case()
+//   }
+// }
 
 3.) Fizz Buzz
-Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
+//Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
+var userInput = prompt('Pick a number!');
+userInput = parseInt(userInput);
 
-
-
-
-
-
-
-
-
-
+if(userInput%3 === 0  && userInput%5 === 0) {
+  alert('Fizzbuzz');
+} else if (userInput%3 === 0) {
+  alert('Fizz');
+} else if (userInput%5 === 0) {
+  alert('Buzz');
+} else {location.reload();}
 
 4.) BONUS!! (Not required, but give it the college try!)
 
