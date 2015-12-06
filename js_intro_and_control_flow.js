@@ -104,14 +104,8 @@ var foods = [
   'Pizza'
 ];
 
-
-
-
-
-
-
-
-
+var foodQ = 'Pizza'; //pick the food to find
+console.log(foods.indexOf(foodQ));  //view index of food chosen
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
@@ -239,7 +233,7 @@ function() {
 }
 
 2.) Grade.js
-Output the following letter grade from a variable with with a test score.
+Output the following letter grade from a variable with a test score.
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
 var userInput = prompt('Enter a number between 1-100');
@@ -249,14 +243,14 @@ while(!userInput) {
   userInput = prompt('Enter a number between 1-100');
 }
 
-// if(userInput) {
-//   switch(userInput) {
-//     case()
-//   }
-// }
+if(userInput) {
+  switch(userInput) {
+    case()
+  }
+}
 
 3.) Fizz Buzz
-//Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
+Write a small program that asks a user for a number. If it''s a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
 var userInput = prompt('Pick a number!');
 userInput = parseInt(userInput);
