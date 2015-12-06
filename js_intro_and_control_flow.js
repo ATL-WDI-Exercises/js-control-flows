@@ -201,8 +201,6 @@ Using an if/else expression, create a script that prompts the user for their age
     userAge = prompt('What is your age?');
     userAge = parseInt(userAge);
 
-    alert('userAge= ' + userAge)
-
     if (typeof userAge === 'number' && !isNaN(userAge)) {
       if (userAge >= 18) {
         alert('You can enter the site.');
