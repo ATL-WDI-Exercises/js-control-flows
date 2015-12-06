@@ -242,6 +242,7 @@ if(userInput) {
 Write a small program that asks a user for a number. If it''s a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
 var userInput;
+var play;
 
 function playAgain() {
   play = confirm('Would you like to play again?');
