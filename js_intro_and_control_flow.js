@@ -53,37 +53,32 @@ console.log(friends.sort().reverse()); //sort friends array in reverse alphabeti
 6.) We have two lists of friends below. We need to combine them into one list and sort them:
 
 var myFriends = [
-                  'Rickon',
-                  'Meera',
-                  'Hodor',
-                  'Jojen',
-                  'Osha',
-                  'Rickard',
-                  'Maester',
-                  'Rodrik',
-                  'Jory',
-                  'Septa',
-                  'Jon'
-                ];
+  'Rickon',
+  'Meera',
+  'Hodor',
+  'Jojen',
+  'Osha',
+  'Rickard',
+  'Maester',
+  'Rodrik',
+  'Jory',
+  'Septa',
+  'Jon'
+];
 
 var yourFriends = [
-                    'Bilbo',
-                    'Boromir',
-                    'Elrond',
-                    'Faramir',
-                    'Frodo',
-                    'Gandalf',
-                    'Legolas',
-                    'Pippin'
-                  ];
+  'Bilbo',
+  'Boromir',
+  'Elrond',
+  'Faramir',
+  'Frodo',
+  'Gandalf',
+  'Legolas',
+  'Pippin'
+];
 
-
-
-
-
-
-
-
+var ourFriends = myFriends.concat(yourFriends); //Combine myFriends & your Friends
+console.log(ourFriends.sort());  //Sort ourFriends in alphabetical order
 
 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
 
