@@ -194,62 +194,64 @@ Using an if/else expression, create a script that prompts the user for their age
   * If the user is between 18 and 21, he/she should receive a message that he/she can enter, but not drink.
   * If the user is older than 21, he/she should receive a message that he/she can both enter and drink.
 
-  var userAge;
-  var again;
+  var userAge; //hold user input
+  var again; //allow restart of user() if truthy number is not provided
 
+  //process user age
   function user() {
-    userAge = prompt('What is your age?');
-    userAge = parseInt(userAge);
+    userAge = prompt('What is your age?'); //prompt user for age
+    userAge = parseInt(userAge); //convert input to number
 
+    //return text to user based on input in userAge
     if (typeof userAge === 'number' && !isNaN(userAge)) {
-      if (userAge >= 18) {
-        alert('You can enter the site.');
+      if (userAge >= 18 && userAge < 21) {
+        alert('You can enter the site, but you cannot drink.');
       } else if (userAge < 18) {
         alert('This site is for 18 and up. You are too young.');
-      } else if (userAge >= 18 && userAge < 21) {
-        alert('You can enter the site, but you cannot drink.');
+      } else if (userAge >= 18) {
+        alert('You can enter the site.');
       } else if (userAge >= 21) {
         alert('You can enter the site, and you can drink.');
       }
-    } else {
+    } else { //if userAge is not a number, ask if user would like to retry inputting age
       again = confirm('Please enter your age as a number.');
       if (again) {
-        user();
+        user(); //calls function to process age if user elects to try inputting age again
       }
     }
   }
 
-  user();
+  user(); //starts program
 
 2.) Grade.js
 Output the following letter grade from a variable with a test score.
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
 var testScore; //variable declared to hold user numeric score
-var scoreText = 'Your letter grade is ';  //string to concat with letter grade
+var scoreText = 'Your letter grade is '; //string to concat with letter grade
 
 //prompt user to input score
 function score() {
   testScore = prompt('Enter a number between 1-100.');
-  testScore = parseInt(testScore);
+  testScore = parseInt(testScore); //parse string to number
 
-  //if no valid number input, re-prompt user for input
+  //if not a truthy number input, re-prompt user for input
   if(!testScore) {
     score();
   }
 
-  //if a test score assign it to number ranges for each letter
+  //if a truthy number is provided, assign to number ranges for each letter grade
   if(testScore) {
     if(testScore < 60 && testScore >= 0) {
-      return 1;
+      return 1; //F
     } else if (testScore >= 60 && testScore < 70) {
-      return 2;
+      return 2; //D
     } else if (testScore >= 70 && testScore < 80) {
-      return 3;
+      return 3; //C
     } else if (testScore >= 80 && testScore < 90) {
-      return 4;
+      return 4; //B
     } else if(testScore >= 90 && testScore <= 100) {
-      return 5;
+      return 5; //A
     }
   }
 }
@@ -278,45 +280,48 @@ switch(score()) {
 3.) Fizz Buzz
 Write a small program that asks a user for a number. If it''s a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
-var userInput;
-var play;
+var userInput; //holds user input
+var play; //used to restart user() when needed
 
+//called after a user plays successfully to ask if user would like to play again
 function playAgain() {
   play = confirm('Would you like to play again?');
     if(play) {
-      user();
+      user(); //calls user() to restart game if user wants to play again
     }
 }
 
+//asks for user input and outputs text depending on user input
 function user() {
-  userInput = prompt('Pick a number!');
-  userInput = parseInt(userInput);
+  userInput = prompt('Pick a number!'); //prompts user for a number
+  userInput = parseInt(userInput); //parses string to number
 
+  //if userInput is an truthy number value
   if(userInput) {
     if(userInput%3 === 0  && userInput%5 === 0) {
       alert('Fizzbuzz');
-      playAgain();
+      playAgain(); //allows user to play again
     } else if (userInput%3 === 0) {
       alert('Fizz');
       playAgain();
     } else if (userInput%5 === 0) {
       alert('Buzz');
       playAgain();
-    } else {
+    } else { //user did not input an number that is divisible by 3 or 5
       play = confirm('You didn\'t use a number divisible by 3 or 5. Would you like to try again?');
       if(play) {
-        user();
+        user(); //if user confirms, will restart user()
       }
     }
-  } else {
+  } else { //user input is not a number - re-prompts for a new input
     play = confirm('It looks like you didn\'t use a number...Would you like to try again?');
     if(play) {
-      user();
+      user(); //if user confirms, will restart user()
     }
   }
 }
 
-user();
+user(); //starts program
 
 4.) BONUS!! (Not required, but give it the college try!)
 
@@ -324,13 +329,18 @@ user();
 If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3.
 Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
-//hardcoded variables for section and ticketType
+//hardcoded variables for section and ticket type
 var sectionName = 'left';
+sectionName = sectionName.toLowerCase(); //make sure lowercase
 var ticketType = 'premium';
-//concat row seating instructions
-var row;
+if(ticketType){ //only convert to lowercase if a ticket type is provided
+  ticketType = ticketType.toLowerCase();
+}
 
-if(ticketType.toLowerCase() === 'premium') {
+var row; //var to hold row instructions
+
+//concatenate row seating instructions based on ticket type
+if(ticketType === 'premium') {
   row = 'the first three rows.'
 } else {
   row = 'row four or higher.'
@@ -344,30 +354,30 @@ Seniors, veterans, and students receive a `$10` discount while standard patrons 
 Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
 
 //hardcoded variables for ticket type and discount type
-var ticketType = [
-  {
-    type: standard,
-    cost: 50
-  },
-  {
-    type: premier,
-    cost: 65
-  },
-  {
-    type: premierPlus,
-    cost: 85
-  }
-];
-
-var discountType= ['senior', 'veteran', 'student'];
-
-if(discountType === 'senior' || discountType === 'veteran' || discountType === 'student') {
-  discountType = -10;
+var ticketType = 'premier plus';
+ticketType = ticketType.toLowerCase(); //make sure lowercase
+var discountType = 'student';
+if(discountType) { //only convert to lowercase if a discount code is provided
+  discountType = discountType.toLowerCase();
 }
 
-console.log('Your ' + ticketType + ' ticket will cost ' )
+var ticketPrice; //variable to hold ticket price
 
+//subtract discount from ticket price
+if(ticketType === 'standard') {
+  ticketPrice = 50;
+} else if (ticketType === 'premier plus') {
+  ticketPrice = 85;
+} else {
+  ticketPrice = 65;
+}
 
+//check ticket type and discount type for pricing
+if (discountType === 'veteran'  || discountType === 'senior' || discountType === 'student') {
+  ticketPrice -= 10;
+} else {
+  discountType = "No discount applied";
+}
 
-
-
+//print ticket information
+console.log('Your ' + ticketType + ' ticket will cost $' + ticketPrice + '.  Discount Code: '  + discountType);
