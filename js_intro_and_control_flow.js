@@ -106,12 +106,8 @@ var yourFriends = [
                     'Pippin'
                   ];
 
-
-
-
-
-
-
+var ourFriends = myFriends.concat(yourFriends);
+console.log(ourFriends);
 
 
 7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Hint: go to MDN to find an array method for finding the index of something in the array.
