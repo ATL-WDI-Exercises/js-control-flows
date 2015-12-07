@@ -225,22 +225,26 @@ Using an if/else expression, create a script that prompts the user for their age
 Output the following letter grade from a variable with a test score.
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
-var testScore;
+var testScore; //variable declared to hold user numeric score
+var scoreText = 'Your letter grade is ';  //string to concat with letter grade
 
+//prompt user to input score
 function score() {
   testScore = prompt('Enter a number between 1-100.');
   testScore = parseInt(testScore);
 
+  //if no valid number input, re-prompt user for input
   if(!testScore) {
-    testScore;
+    score();
   }
 
+  //if a test score assign it to number ranges for each letter
   if(testScore) {
     if(testScore < 60 && testScore >= 0) {
       return 1;
-    } else if (testScore > 60 && testScore <75) {
+    } else if (testScore >= 60 && testScore < 70) {
       return 2;
-    } else if (testScore >= 75 && testScore < 80) {
+    } else if (testScore >= 70 && testScore < 80) {
       return 3;
     } else if (testScore >= 80 && testScore < 90) {
       return 4;
@@ -250,24 +254,25 @@ function score() {
   }
 }
 
+//switch statment to output letter grade
 switch(score()) {
   case 1:
-    "F";
+    alert(scoreText + 'F');
     break;
   case 2:
-    "D";
+    alert(scoreText + 'D');
     break;
   case 3:
-    "C";
+    alert(scoreText + 'C');
     break;
   case 4:
-    "B";
+    alert(scoreText + 'B');
     break;
   case 5:
-    "A";
+    alert(scoreText + 'A');
     break;
   default:
-    "Could not compute your grade at this time."
+    alert("Could not compute your grade at this time.");
 }
 
 3.) Fizz Buzz
@@ -319,8 +324,10 @@ user();
 If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3.
 Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
 
-var name = 'left';
+//hardcoded variables for section and ticketType
+var sectionName = 'left';
 var ticketType = 'premium';
+//concat row seating instructions
 var row;
 
 if(ticketType.toLowerCase() === 'premium') {
@@ -329,10 +336,38 @@ if(ticketType.toLowerCase() === 'premium') {
   row = 'row four or higher.'
 }
 
-console.log('Please sit in the ' + name  + ' section in ' + row);
+//print final seating instructions based on section and ticket type
+console.log('Please sit in the ' + sectionName  + ' section in ' + row);
+
+- There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating.
+Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount.
+Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
+
+//hardcoded variables for ticket type and discount type
+var ticketType = [
+  {
+    type: standard,
+    cost: 50
+  },
+  {
+    type: premier,
+    cost: 65
+  },
+  {
+    type: premierPlus,
+    cost: 85
+  }
+];
+
+var discountType= ['senior', 'veteran', 'student'];
+
+if(discountType === 'senior' || discountType === 'veteran' || discountType === 'student') {
+  discountType = -10;
+}
+
+console.log('Your ' + ticketType + ' ticket will cost ' )
 
 
 
 
 
-- There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
