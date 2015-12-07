@@ -273,16 +273,59 @@ if (number % 15 === 0) {
 }
 
 
-
-
-
-
-
-
-
-
 4.) BONUS!! (Not required, but give it the college try!)
 
-- There is an event where guests will be sitting in three sections based on their names: "left", "middle", and "right". If they have a premium ticket they can sit in first `3` rows in their section, otherwise they can take any seat behind row 3. Using hardcoded variables for `name` and `ticketType` print out appropriate seating instructions.
+- There is an event where guests will be sitting in three sections based on
+their names: "left", "middle", and "right". If they have a premium ticket
+they can sit in first `3` rows in their section, otherwise they can take any
+seat behind row 3. Using hardcoded variables for `name` and `ticketType` print
+out appropriate seating instructions.
 
-- There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus (for drinks) seating. Seniors, veterans, and students receive a `$10` discount while standard patrons  receive no discount. Based on hardcoded variables for `ticketType` and `discountType`, print out a patrons `ticketPrice`.
+var name = "Chad";
+var firstLetter = name[0];
+var ticketType = "Premium";
+var mesage = "";
+
+if (ticketType.toLowerCase() === "premium") {
+  message = "You can sit in any of the first 3 rows and";
+} else {
+  message = "You can sit behind the first 3 rows and";
+}
+if (firstLetter.toLowerCase() < "f") {
+  message += " to the left.";
+} else if (firstLetter.toLowerCase() < "m") {
+  message += " in the middle.";
+} else {
+  message += " to the right";
+}
+
+console.log(message);
+
+
+- There is an event with ticket prices that are `$50`, `$65`, `$85` for standard,
+premier, and premier plus (for drinks) seating. Seniors, veterans, and students
+receive a `$10` discount while standard patrons  receive no discount. Based on
+hardcoded variables for `ticketType` and `discountType`, print out a patrons
+`ticketPrice`.
+
+var ticketType = "standard";
+var discountType = "veteran";
+var ticketPrice;
+
+switch (ticketType) {
+  case "standard":
+    ticketPrice = 50;
+    break;
+  case "premier":
+    ticketPrice = 65;
+    break;
+  case "premier plus":
+    ticketPrice = 85;
+    break;
+}
+
+if (discountType === "senior" || discountType === "veteran" || discountType === "student") {
+  ticketPrice -= 10;
+}
+
+console.log("$" + ticketPrice);
