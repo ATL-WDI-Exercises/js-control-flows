@@ -254,28 +254,48 @@ switch(true) {
 var name = ["left", "middle", "right"];
 var ticketType = ["Premium","Normal"];
 
-if (ticketType === ticketType[0]) {
+if (ticketType === "Premium") {
   console.log("Oooooh, a premium ticket.");
-  if (name === name[0]) {
+  if (name === "left") {
     console.log("Sit in the first three rows of the left section.");
   }
-  if (name === name[1]) {
+  if (name === "middle") {
     console.log("Sit in the first three rows of the middle section.");
   }
-  if (name === name[3])
+  if (name === "right")
     console.log("Sit in the first three rows of the right section.");
-  } else {
+  } else if (ticketType === "Normal") {
         console.log("A normal ticket. You cheap, good-for-nothing bastard.");
-    if (name === name[0]) {
-        console.log("Sit anywhere but the first three rows of the left section.");
-    }
-    if (name === name[1]) {
-        console.log("Sit anywhere but the first three rows of the middle section.");
-    }
-    if (name === name[3]) {
-        console.log("Sit anywhere but the first three rows of the right section.");
-    }
-
+        if (name === "left") {
+            console.log("Sit anywhere but the first three rows of the left section.");
+        }
+        if (name === "middle") {
+            console.log("Sit anywhere but the first three rows of the middle section.");
+        }
+        if (name === "right") {
+            console.log("Sit anywhere but the first three rows of the right section.");
+        }
   }
 
-// There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus(for drinks) seating.Seniors, veterans, and students receive a `$10` discount while standard patrons receive no discount.Based on hardcoded variables for `ticketType`and `discountType`, print out a patrons `ticketPrice`.
+// There is an event with ticket prices that are `$50`, `$65`, `$85` for standard, premier, and premier plus(for drinks)seating. Seniors, veterans, and students receive a `$10` discount while standard patrons receive no discount. Based on hardcoded variables for `ticketType`and `discountType`, print out a patrons `ticketPrice`.
+
+ticketPrice= [50,65,85];
+ticketType = ["Standard","Premier","Premier Plus"];
+discountType = ["Senior","Veteran","Student"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
