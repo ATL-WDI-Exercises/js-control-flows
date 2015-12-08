@@ -48,12 +48,14 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 
 Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
+ages.sort (function(a, b) {
+    return a - b;
+})
 
+var half = Math.floor(ages.length/2);
+console.log(half);
 
-
-
-
-
+ages[half]
 
 
 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
@@ -129,34 +131,22 @@ var foods = [
               'Pizza'
             ];
 
-
-
-
-
-
-
-
+foods.indexOf("") + 1;
 
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
 
-
-
-
-
-
+foods.indexOf("Donuts");
+foods.splice(13, 1);
 
 
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
-
-
-
-
-
-
-
+var fifthFavFood = foods[5 - 1];
+fifthFavFood;
+var tenthFavFood = foods[10 - 1];
+tenthFavFood;
 
 
 10.) How would you create an array that efficiently stored the following information:
