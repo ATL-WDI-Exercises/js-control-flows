@@ -61,21 +61,16 @@ Find the `median` age. Note: the median is the middle index of the sorted array.
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
 
+var friendsArray = friends.split(",");
 
-
-
-
-
+(function() {
+    return friendsArray;
+})();
 
 
 5.) List all the `friends` above in reverse alphabetical order.
 
-
-
-
-
-
-
+friendsArray.reverse();
 
 
 
