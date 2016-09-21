@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>fizzBuzz</title>
+</head>
+<body>
+<script>
+var num = prompt ("Pick a number");
+if (parseInt(num, 10) === 0){
+  alert("I meant Pick a Positive Integer");
+}
+else if (num == null){
+  alert("You should have picked a number");
+}
+else if (num % 3 === 0 && num % 5 === 0){
+  alert("FizzBuzz");
+}
+else if (num % 3 === 0){
+  alert("fizz");
+}
+else if (num % 5 === 0){
+  alert("buzz");
+}
+
+</script>
+</body>
+</html>
