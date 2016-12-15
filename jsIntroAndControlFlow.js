@@ -287,25 +287,39 @@ foods.slice(5,10);
   'Lydia' is 24
   'Harriet' is 18
 
- 
+  // step1 could be to turn the information into one large string:
 
+var information =
+  'Moe' is 18
+  'Larry' is 19
+  'Curly' is 20
+  'Jane' is 20
+  'Emma' is 21
+  'Elizabeth' is 18
+  'Elinor' is 23
+  'Mary' is 25
+  'Darcy' is 24
+  'Grey' is 18
+  'Lydia' is 24
+  'Harriet' is 18;
 
+  //step2 would be to fig out a regExp that would allow the function to locate the names and ages.
+  //on every line, whatever is inside the single quotes needs to be  a name element, and the two digit
+  //integer at the end of each line needs to be an age element.
 
-  var NamesAndAges = [
+  var NamesAndAges = {
     'Moe' : 18;
     'Larry' : 19;
     'Curly' : 20;
-    'Jane':20;
-    'Emme':21;
-    'Elizabeth':18;
-    'Elinor':23;
-    'Mary':25;
-    'Darcy':24;
-    'Grey':18;
-    'Lydia':24;
-    'Harriet':18;
-  ]
+    'Jane'
+  }
 
+/*var namesAndAges = [ ];
+namesAndAges["Name"] = "Moe";
+namesAndAges["age"] = 18;
+var x = person.length;         // person.length will return 0
+var y = person[0];             // person[0] will return undefined
+*/
 
 
 
