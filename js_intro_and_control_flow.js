@@ -3,8 +3,8 @@ Intro to Javascript
 1.) Find the last name in the following array:
 
 var friends = [
-                'Moe', 
-                'Larry', 
+                'Moe',
+                'Larry',
                 'Curly',
                 'Jane',
                 'Emma',
@@ -16,10 +16,29 @@ var friends = [
                 'Lydia',
                 'Harriet'
               ];
+console.log(friends[friends.length -1]);
+
 
 Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
 
-
+var friends = [
+                'Moe',
+                'Larry',
+                'Curly',
+                'Jane',
+                'Emma',
+                'Elizabeth',
+                'Elinor',
+                'Mary',
+                'Darcy',
+                'Grey',
+                'Lydia',
+                'Harriet'
+              ];
+        friends.unshift('Annie');
+        friends.push('Nate');
+        friends[6] = 'Liz';
+        console.log(friends);
 
 
 
@@ -32,7 +51,24 @@ Add your name to the end of the `friends` and add another name to beginning. Cha
 
 2.) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
 
-
+var friends = [
+                'Moe',
+                'Larry',
+                'Curly',
+                'Jane',
+                'Emma',
+                'Elizabeth',
+                'Elinor',
+                'Mary',
+                'Darcy',
+                'Grey',
+                'Lydia',
+                'Harriet'
+              ];
+        friends.unshift('Annie');
+        friends.push('Nate');
+        friends[6] = 'Liz';
+        console.log(friends.sort());
 
 
 
@@ -52,7 +88,11 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 
 Find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
 
-
+function compareNumbers(a, b){
+            return a-b;
+        }
+    console.log(ages.sort(compareNumbers));
+    console.log(ages.length);
 
 
 
@@ -61,7 +101,7 @@ Find the `median` age. Note: the median is the middle index of the sorted array.
 
 
 4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
- 
+
 var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
 
 
@@ -109,7 +149,8 @@ var yourFriends = [
                     'Legolas',
                     'Pippin'
                   ];
-
+var combinedArray = myFriends.concat(yourFriends);
+    console.log(combinedArray.sort());
 
 
 
@@ -141,7 +182,7 @@ var foods = [
               'Chocolate',
               'Pizza'
             ];
-
+  console.log(foods[x];
 
 
 
@@ -153,7 +194,29 @@ var foods = [
 
 8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
 
-
+var foods = [
+              'Popcorn',
+              'Potato chips',
+              'Shrimp',
+              'Chicken rice',
+              'Poutine',
+              'Tacos',
+              'Toast',
+              'French Toast',
+              'Crab',
+              'Pho',
+              'Lasagna',
+              'Brownie',
+              'Lobster',
+              'Donuts',
+              'Ice cream',
+              'Hamburger',
+              'Sushi',
+              'Chocolate',
+              'Pizza'
+            ];
+        foods.splice(13, 1);
+        console.log(foods);
 
 
 
@@ -164,7 +227,28 @@ var foods = [
 9.) My friends want to know what my `5`th to `10`th favorite foods are.
 
 
-
+var foods = [
+              'Popcorn',
+              'Potato chips',
+              'Shrimp',
+              'Chicken rice',
+              'Poutine',
+              'Tacos',
+              'Toast',
+              'French Toast',
+              'Crab',
+              'Pho',
+              'Lasagna',
+              'Brownie',
+              'Lobster',
+              'Ice cream',
+              'Hamburger',
+              'Sushi',
+              'Chocolate',
+              'Pizza'
+            ];
+        console.log(foods[4]);
+        console.log(foods[9]);
 
 
 
@@ -187,6 +271,17 @@ var foods = [
   'Lydia' is 24
   'Harriet' is 18
 
+var people = [{name:'Moe', age:18},
+                    {name:'Curly', age:20},
+                    {name:'Jane', age:20},
+                    {name:'Emma', age: 21},
+                    {name:'Elizabeth', age:18},
+                    {name:'Elinor', age:23},
+                    {name:'Mary', age:25},
+                    {name:'Darcy', age:24},
+                    {name:'Grey', age:18},
+                    {name:'Lydia', age:24},
+                    {name:'Harriet', age:18}];
 
 
 
@@ -214,7 +309,7 @@ Using an if/else expression, create a script that prompts the user for their age
 
 
 2.) Grade.js
-Output the following letter grade from a variable with with a test score. 
+Output the following letter grade from a variable with with a test score.
 
 Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
 
@@ -230,7 +325,7 @@ Based on the user input, display either "A", "B", "C", "D", or "F", for an score
 
 
 3.) Fizz Buzz
-Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz". 
+Write a small program that asks a user for a number. If it's a multiple of 3, output "fizz". If it's a multiple of 5, output "buzz". If it's a multiple of 3 and 5, output "Fizzbuzz".
 
 
 
